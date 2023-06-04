@@ -6,5 +6,5 @@ bin/debug/main.o: main.c c:\avr\avr\include\stdio.h \
  c:\avr\avr\include\avr\iom328p.h c:\avr\avr\include\avr\portpins.h \
  c:\avr\avr\include\avr\common.h c:\avr\avr\include\avr\version.h \
  c:\avr\avr\include\avr\fuse.h c:\avr\avr\include\avr\lock.h analogRead.h \
- c:\avr\avr\include\string.h c:\avr\avr\include\util\delay.h \
- c:\avr\avr\include\util\delay_basic.h c:\avr\avr\include\math.h
+ c:\avr\avr\include\util\delay.h c:\avr\avr\include\util\delay_basic.h \
+ c:\avr\avr\include\math.h
