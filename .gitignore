@@ -1,2 +1,4 @@
 /sketchworm.hex
 /sketchworm.map
+*.o
+/bin/
