@@ -39,7 +39,7 @@ int main()
     _delay_ms(50);
     // Set start LED
     setMarker(x, y);
-    _delay_ms(50);
+    _delay_ms(500);
 
 	while (1)
     {
@@ -56,25 +56,21 @@ int main()
         if(horizontalMove < ANALOG_LOW && x != 15)
         {
             x++;
-            _delay_ms(100);
         }
 
         if(horizontalMove > ANALOG_HIGH && x != 0)
         {
             x--;
-            _delay_ms(100);
         }
 
         if(verticalMove < ANALOG_LOW && y != 7)
         {
             y++;
-            _delay_ms(100);
         }
 
         if(verticalMove > ANALOG_HIGH && y != 0)
         {
             y--;
-            _delay_ms(100);
         }
 	}
 	return 0;
@@ -90,12 +86,11 @@ void clearScreen()
             max7219b_out();
         }
     }
-    _delay_ms(50);
 }
 
 void setMarker(uint8_t x, uint8_t y)
 {
     max7219b_set(x, y);
     max7219b_out();
-    _delay_ms(50);
+    _delay_ms(100);
 }

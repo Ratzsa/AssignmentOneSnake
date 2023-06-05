@@ -7,7 +7,7 @@
 # Assignment 1: Etch-a-sketch & Snake
 
 Using emulation: https://wokwi.com/projects/296234816685212169
-Step 1 (G): Rewrite the code to C code.
+Step 1 (G): Rewrite the code to C code. (Completed 2023-06-05)
 Step 2 (VG): Implement the game Snake.
 
 This assignment must be done on the Arduino UNO (ATmega328p) to practice programming on low resource hardware.
@@ -41,6 +41,10 @@ direction the joystick is moved, the x or y coordinate is increased or decreased
 There are delays in the setMarker and clearScreen functions as well as whenever the joystick is moved. These delays do
 not feel very good at the moment and may need adjustment in the future.
 The joystick values were chosen for being 75% of max input in any direction.
+
+## 2023-06-05
+Played around with delays. Looked at the code available in the Wokwi project and saw that there was only one delay. Decided to write my code
+like that too, and it seems to work pretty well. Step 1 can be considered complete.
 
 \\*1 After further reading and discovering that a pointer is NOT 2 bytes that I thought it was, I decided to start using
 stdint.h and uint for small variables. **
