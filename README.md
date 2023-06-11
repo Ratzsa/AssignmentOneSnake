@@ -16,9 +16,7 @@ Joystick controls heavily inspired by and analogRead files from: https://github.
 Display libraries from: https://github.com/aspcodenet/avrmax72
 
 ## TODO
-Check libraries for licenses.
-If license is GNU change to libraries with MIT licenses.
-Implement Snake.
+Step 2.
 
 ## Start
 To understand what the code in max72xx.c does the first thing I did was to make the display light up each LED in order
@@ -45,6 +43,8 @@ The joystick values were chosen for being 75% of max input in any direction.
 ## 2023-06-05
 Played around with delays. Looked at the code available in the Wokwi project and saw that there was only one delay. Decided to write my code
 like that too, and it seems to work pretty well. Step 1 can be considered complete.
+
+Was informed EAS and Snake were to be two different projects. This project will now only be EAS.
 
 \\*1 After further reading and discovering that a pointer is NOT 2 bytes that I thought it was, I decided to start using
 stdint.h and uint for small variables. **
