@@ -21,6 +21,7 @@ on different setups make sure to adjust movement in main.c.
 ##### ##### ##### ##### ##### ##### ##### ##### 
 
 Using emulation: https://wokwi.com/projects/296234816685212169
+
 Step 1 (G): Rewrite the code to C code. (Completed 2023-06-05)
 Step 2 (VG): Implement the game Snake.
 
