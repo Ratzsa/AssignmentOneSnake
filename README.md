@@ -9,15 +9,13 @@
 ##### ##### ##### ##### ##### ##### ##### ##### 
 ###### ###### ###### ###### ###### ###### ######
 IMPORTANT NOTICE
-The Wokwi simulation is upside down somehow. To run properly in Wokwi you may have to switch the vertical axis around in main.c:
-Line 66: if(verticalMove < ANALOG_LOW && y != 0) -> if(verticalMove < ANALOG_LOW && y != 7)
-Line 68: y--; -> y++;
-Line 71: if(verticalMove > ANALOG_HIGH && y != 7) -> if(verticalMove > ANALOG_HIGH && y != 0)
-Line 73: y++; -> y--;
 
-To simplify the process I made a copy of main.c with the correct settings to run on Wokwi. To run on Wokwi, rename mainWokwi.c to only main.c
-(make sure to make a copy of the old main.c) as well as rename max72xxWokwi.h to max72xx.h (again, make sure to make a copy of the old file) and
-then compile and run the emulation.
+Everything got confusing, so I added config.h and put all defines from main in there. If running on a different setup than the Wokwi link,
+make sure to adjust values accordingly.
+The number of segments that was defined in max72xx.h is now defined in config.h.
+
+It is also possible that either the joystick or the display is upside-down and inputs go the wrong way. It works on Wokwi, but if running
+on different setups make sure to adjust movement in main.c.
 
 ##### ##### ##### ##### ##### ##### ##### ##### 
 ##### ##### ##### ##### ##### ##### ##### ##### 
@@ -70,3 +68,10 @@ Finally decided to connect everything on real hardware. Had to lower max columns
 Found out that the simulation on Wokwi is somehow upside down or something. The easy fix with how I connected everything was to switch the vertical axis around. See important notice at the top.
 With only one LED I also had to change a value in max72xx.h. I have made a copy of that file with the correct value for Wokwi.
 EAS now seems to work as intended both on Wokwi and on physical hardware.
+
+## 2023-06-24 (FINAL?) UPDATE
+Implemented config.h
+Instead of replacing files, just change values in config.h.
+Also got the epiphany that the requirements for G were to just rewrite the Arduino code to C code, and I am way past that.
+Will set the values so they work in the Wokwi simulation, and leave instructions as comments for using physical hardware.
+Step 1 is way overdone.
