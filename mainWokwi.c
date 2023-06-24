@@ -10,7 +10,7 @@
 #define BIT_FLIP(a,b) ((a) ^= (1ULL<<(b)))
 #define BIT_CHECK(a,b) (!!((a) & (1ULL<<(b)))) 
 
-#define MAX_COLUMNS 8
+#define MAX_COLUMNS 16
 #define MAX_ROWS 8
 #define ANALOG_HIGH 768
 #define ANALOG_LOW 256
@@ -29,7 +29,7 @@ int main()
     BIT_CLEAR(DDRC, JOYSTICK_VERTICAL);
 	BIT_CLEAR(DDRC, JOYSTICK_HORIZONTAL);
     
-    uint8_t x = 7;
+    uint8_t x = 15;
     uint8_t y = 0;
 
 	init_serial();
@@ -53,7 +53,7 @@ int main()
         
         setMarker(x, y);
 
-        if(horizontalMove < ANALOG_LOW && x != 7)
+        if(horizontalMove < ANALOG_LOW && x != 15)
         {
             x++;
         }

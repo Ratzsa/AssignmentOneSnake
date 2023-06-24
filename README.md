@@ -14,6 +14,11 @@ Line 66: if(verticalMove < ANALOG_LOW && y != 0) -> if(verticalMove < ANALOG_LOW
 Line 68: y--; -> y++;
 Line 71: if(verticalMove > ANALOG_HIGH && y != 7) -> if(verticalMove > ANALOG_HIGH && y != 0)
 Line 73: y++; -> y--;
+
+To simplify the process I made a copy of main.c with the correct settings to run on Wokwi. To run on Wokwi, rename mainWokwi.c to only main.c
+(make sure to make a copy of the old main.c) as well as rename max72xxWokwi.h to max72xx.h (again, make sure to make a copy of the old file) and
+then compile and run the emulation.
+
 ##### ##### ##### ##### ##### ##### ##### ##### 
 ##### ##### ##### ##### ##### ##### ##### ##### 
 
@@ -61,5 +66,7 @@ Was informed EAS and Snake were to be two different projects. This project will 
 stdint.h and uint for small variables. **
 
 ## 2023-06-24
-Finally decided to connect everything on real hardware. Had to lower max columns to 8 because for now I only own one LCD module.
-Found out that the simulation on Wokwi is somehow upside down or something. The easy fix with how I connected everything was to switch the vertical axis around.
+Finally decided to connect everything on real hardware. Had to lower max columns to 8 because for now I only own one LED module.
+Found out that the simulation on Wokwi is somehow upside down or something. The easy fix with how I connected everything was to switch the vertical axis around. See important notice at the top.
+With only one LED I also had to change a value in max72xx.h. I have made a copy of that file with the correct value for Wokwi.
+EAS now seems to work as intended both on Wokwi and on physical hardware.
