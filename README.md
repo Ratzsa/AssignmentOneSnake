@@ -6,6 +6,17 @@
 
 # Assignment 1: Etch-a-sketch & Snake
 
+##### ##### ##### ##### ##### ##### ##### ##### 
+###### ###### ###### ###### ###### ###### ######
+IMPORTANT NOTICE
+The Wokwi simulation is upside down somehow. To run properly in Wokwi you may have to switch the vertical axis around in main.c:
+Line 66: if(verticalMove < ANALOG_LOW && y != 0) -> if(verticalMove < ANALOG_LOW && y != 7)
+Line 68: y--; -> y++;
+Line 71: if(verticalMove > ANALOG_HIGH && y != 7) -> if(verticalMove > ANALOG_HIGH && y != 0)
+Line 73: y++; -> y--;
+##### ##### ##### ##### ##### ##### ##### ##### 
+##### ##### ##### ##### ##### ##### ##### ##### 
+
 Using emulation: https://wokwi.com/projects/296234816685212169
 Step 1 (G): Rewrite the code to C code. (Completed 2023-06-05)
 Step 2 (VG): Implement the game Snake.
@@ -48,3 +59,7 @@ Was informed EAS and Snake were to be two different projects. This project will 
 
 \\*1 After further reading and discovering that a pointer is NOT 2 bytes that I thought it was, I decided to start using
 stdint.h and uint for small variables. **
+
+## 2023-06-24
+Finally decided to connect everything on real hardware. Had to lower max columns to 8 because for now I only own one LCD module.
+Found out that the simulation on Wokwi is somehow upside down or something. The easy fix with how I connected everything was to switch the vertical axis around.

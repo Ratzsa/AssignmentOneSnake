@@ -63,14 +63,14 @@ int main()
             x--;
         }
 
-        if(verticalMove < ANALOG_LOW && y != 7)
-        {
-            y++;
-        }
-
-        if(verticalMove > ANALOG_HIGH && y != 0)
+        if(verticalMove < ANALOG_LOW && y != 0)
         {
             y--;
+        }
+
+        if(verticalMove > ANALOG_HIGH && y != 7)
+        {
+            y++;
         }
 	}
 	return 0;
@@ -82,10 +82,10 @@ void clearScreen()
     {
         for(int y = 0; y < MAX_ROWS; y++)
         {
-            max7219b_clr(x, y);
-            max7219b_out();
+            max7219b_clr(x, y);            
         }
     }
+    max7219b_out();
 }
 
 void setMarker(uint8_t x, uint8_t y)
