@@ -10,8 +10,7 @@
 ###### ###### ###### ###### ###### ###### ######
 IMPORTANT NOTICE
 
-Everything got confusing, so I added config.h and put all defines from main in there. If running on a different setup than the Wokwi link,
-make sure to adjust values accordingly.
+Everything got confusing, so I added config.h and put all defines from main and one from max72xx.h in there. If running on a different setup than the Wokwi link, make sure to adjust values accordingly.
 The number of segments that was defined in max72xx.h is now defined in config.h.
 
 It is also possible that either the joystick or the display is upside-down and inputs go the wrong way. It works on Wokwi, but if running
