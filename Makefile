@@ -23,7 +23,7 @@ endif
 
 OBJS = $(addprefix $(OUTPUTDIR)/,$(SOURCES:.c=.o))
 
-all: $(OUTPUTDIR)  $(OUT) 
+all: $(OUTPUTDIR)  $(OUT)
 
 $(OBJS): Makefile
 
@@ -50,7 +50,7 @@ isp: ${BIN}.hex
 clean:
 	del "$(OUT)"  *.map *.P *.d
 
-$(OUTPUTDIR): 
+$(OUTPUTDIR):
 	@mkdir "$(OUTPUTDIR)"
-		   	
+
 .PHONY: clean dirs
