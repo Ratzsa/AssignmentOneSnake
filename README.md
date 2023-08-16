@@ -6,7 +6,7 @@
 
 # Assignment 1: Etch-a-sketch & Snake
 
-##### ##### ##### ##### ##### ##### ##### ##### 
+##### ##### ##### ##### ##### ##### ##### #####
 ###### ###### ###### ###### ###### ###### ######
 IMPORTANT NOTICE
 
@@ -16,8 +16,8 @@ The number of segments that was defined in max72xx.h is now defined in config.h.
 It is also possible that either the joystick or the display is upside-down and inputs go the wrong way. It works on Wokwi, but if running
 on different setups make sure to adjust movement in main.c.
 
-##### ##### ##### ##### ##### ##### ##### ##### 
-##### ##### ##### ##### ##### ##### ##### ##### 
+##### ##### ##### ##### ##### ##### ##### #####
+##### ##### ##### ##### ##### ##### ##### #####
 
 Using emulation: https://wokwi.com/projects/296234816685212169
 
@@ -75,3 +75,6 @@ Instead of replacing files, just change values in config.h.
 Also got the epiphany that the requirements for G were to just rewrite the Arduino code to C code, and I am way past that.
 Will set the values so they work in the Wokwi simulation, and leave instructions as comments for using physical hardware.
 Step 1 is way overdone.
+
+## 2023-08-15
+Last fix. Renamed the hex file to make sense. Small Makefile adjustment (whitespace). Last test to make sure it runs on the Wokwi project.

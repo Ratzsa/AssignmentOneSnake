@@ -9,7 +9,7 @@ CFLAGS=-Wall -Wextra  -Wundef -pedantic \
 		-Os -std=gnu99 -DF_CPU=16000000UL -mmcu=${MCU} -DBAUD=19200
 LDFLAGS=-mmcu=$(MCU)
 PORT=\\\\.\\COM7
-BIN=sketchworm
+BIN=etchasketch
 OUT=${BIN}.hex
 SOURCES = main.c max72xx.c uart.c analogRead.c
 
